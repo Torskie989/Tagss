@@ -1,0 +1,192 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5efe7;
+}
+
+/* NAVBAR */
+
+header{
+position:absolute;
+width:100%;
+z-index:10;
+}
+
+.container{
+width:90%;
+margin:auto;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+color:white;
+}
+
+.logo{
+font-weight:600;
+font-size:20px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:15px;
+}
+.nav ul li a:hover{
+   color:  #af6520; 
+}
+
+.cart{
+background:#8b5e3c;
+padding:8px 15px;
+border-radius:20px;
+}
+
+/* HERO */
+
+.hero{
+height:600px;
+background-image:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+top:0;
+left:0;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:700px;
+}
+
+.hero h4{
+letter-spacing:3px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-family:'Pacifico',cursive;
+font-size:48px;
+margin-bottom:25px;
+}
+
+.hero button{
+background:#c78b45;
+border:none;
+padding:12px 30px;
+font-size:16px;
+color:white;
+border-radius:25px;
+cursor:pointer;
+}
+
+/* PRODUCTS */
+
+.products{
+padding:80px 0;
+text-align:center;
+background:#f0dfd8;
+}
+
+.products h2{
+font-family:'Pacifico',cursive;
+font-size:36px;
+margin-bottom:10px;
+}
+
+.products p{
+margin-bottom:40px;
+color:#555;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+width:85%;
+margin:auto;
+margin-top: 10px;
+}
+
+.product{
+background:rgb(156, 95, 44);
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.product:hover{
+transform:translateY(-5px);
+color: #af6520;
+}
+
+.product img{
+width:120px;
+height:120px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+.product h3{
+font-size:16px;
+margin-bottom:8px;
+}
+
+.product span{
+font-weight:bold;
+color:#8b5e3c;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero h1{
+font-size:34px;
+}
+
+}
+
+@media(max-width:500px){
+
+.product-grid{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
